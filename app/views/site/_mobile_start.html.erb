@@ -1,0 +1,6 @@
+<%= image_tag 'girl_with_iphone_shopping.jpg' %>
+<h1>Is Your Business Ready For The Mobile Generation?</h1>
+<p>Are your employees able to access your company's systems while on the go? Are your customers getting the best mobile experience from your site? Do you have a strategy to tap into the millions of new iPhone, Android, Blackberry, Palm Pre and smart-phone users that are flocking to the mobile web every month?</p>
+<div class="buttons">
+  <%= link_to_remote "Yes, it is.", :url => teaser_path(:next_step => "mobile_yes"), :html => {:class => "yes_button"} %> <%= link_to_remote "No, it isn't.", :url => teaser_path(:next_step => "mobile_no"), :html => {:class => "no_button"} %>
+</div>

@@ -1,0 +1,24 @@
+<h1>Listing service_assignments</h1>
+
+<table>
+  <tr>
+    <th>Service</th>
+    <th>Service grou</th>
+    <th>Enabled</th>
+  </tr>
+
+<% @service_assignments.each do |service_assignment| %>
+  <tr>
+    <td><%=h service_assignment.service_id %></td>
+    <td><%=h service_assignment.service_grou_id %></td>
+    <td><%=h service_assignment.enabled %></td>
+    <td><%= link_to 'Show', service_assignment %></td>
+    <td><%= link_to 'Edit', edit_service_assignment_path(service_assignment) %></td>
+    <td><%= link_to 'Destroy', service_assignment, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New service_assignment', new_service_assignment_path %>

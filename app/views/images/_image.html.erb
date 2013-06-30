@@ -1,0 +1,5 @@
+<% div_for image do %>
+  <%= link_to_unless_current thumb_link(image), image %>
+  <br/>
+  <%= image.name %>
+<% end %>

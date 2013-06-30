@@ -1,0 +1,196 @@
+<% content_for :page_scripts do %>
+  <%= javascript_include_tag "np-slider.js" %>
+<% end %>
+
+<% content_for :lead_content do %> 
+<div id="teaser_container"> 
+  <div id="teaser" class="grid_10 alpha">
+    <%= render :partial => "mobile_start" %>
+  </div>
+</div>
+<% end %>
+
+<div id="offerings" class="grid_10 alpha">
+  <h2>What We Do</h2>
+  <div class="grid_2 alpha">
+    <a href="/services#bus_app_title"><%= image_tag('busn_app_140.png')%></a>
+  </div>
+  <div class="grid_3">
+    <h3><a href="/services#bus_app_title">Business Applications</a></h3>
+    <p>Strong technical expertise combined with broad subject matter experience means the right solution for your enterprise business application.</p>
+  </div>
+  <div class="grid_2">
+    <a href="/services#web_app_title"><%= image_tag('web_app_140.png')%></a>
+  </div>
+  <div class="grid_3 omega">
+    <h3><a href="/services#web_app_title">User-centric Websites</a></h3>
+    <p>User frustration is the number one reason websites fail. We specialize in easy-to-use, accessible sites that won't turn your customers away.</p>
+  </div>
+  <div class="clear pad_bottom"></div>
+  <div class="grid_2 alpha">
+    <a href="/services#iphone_app_title"><%= image_tag('iphone_app_140.png')%></a>
+  </div>
+  <div class="grid_3">
+    <h3><a href="/services#iphone_app_title">iPhone/Mobile Apps</a></h3>
+    <p>There will be more than 80 million iPhone and iPod Touch owners by the end of 2010. Think your company doesn't need an iPhone app? Think again.</p>
+  </div>
+  <div class="grid_2">
+    <a href="/services#infrastructure_title"><%= image_tag('servers_140.png')%></a>
+  </div>
+  <div class="grid_3 omega">
+    <h3><a href="/services#infrastructure_title">Systems &amp; Server Infrastructure</a></h3>
+    <p>Cloud Computing gets all the press, but is it right for your business? We design robust, scalable systems for even the most demanding applications.</p>
+  </div>
+  <div class="clear pad_bottom"></div>
+  <div class="grid_2 alpha">
+    <a href="/services#rescue_title"><%= image_tag('bugs_140.png')%></a>
+  </div>
+  <div class="grid_3">
+    <h3><a href="/services#rescue_title">Project Rescue</a></h3>
+    <p>Sometimes, even the best intended projects go awry. We are experts in righting the ship, no matter how much it resembles the Titanic.</p>
+  </div>
+  <div class="grid_2">
+    <a href="/services#strategy_title"><%= image_tag('strategy_140.png')%></a>
+  </div>
+  <div class="grid_3 omega">
+    <h3><a href="/services#strategy_title">Strategy &amp; Consulting</a></h3>
+    <p>Our team has a long track record of success on projects of all sizes and scopes for the best of the best. We know how to deliver results.</p>
+  </div>
+  <div class="clear pad_6"></div>
+</div>
+
+<div class="clear pad_bottom"></div>
+
+<div id="current_projects" class="grid_10 alpha pad_bottom">
+  <h3>Our Products</h3> 
+  <div class="fudge">
+    <div class="boxcontainer grid_3 alpha">
+  	  <div class="boxgrid slideright">
+    		<img class="cover" src="/images/product_nano.jpg"/>
+    		<h4>NaNoMojo</h3>
+    		<p>iPhone App</p>
+    		<p>The only iPhone App dedicated to the National Novel Writers Month competition.</p>
+    		<p>
+    		  <a href="http://itunes.com/apps/nanomojo">Download from iTunes</a>
+    		</p>
+    	</div>
+  	</div>
+	
+	  <div class="boxcontainer grid_3">
+  	  <div class="boxgrid thecombo">
+    		<img class="cover" src="/images/product_rwc.jpg"/>
+    			<h4>Ruby Web Crawler</h3>
+    			<p>Open Source Ruby Code</p>	
+    			<p>A lightweight web crawler written in pure Ruby</p>
+    			<p><a href="http://blog.netphase.com/2007/04/19/ruby-web-crawler/">Visit Blog Article</a></p>
+    	</div>
+  	</div>
+	
+	  <div class="boxcontainer grid_3 omega">
+  	  <div class="boxgrid thecombo">
+    		<img class="cover" src="/images/product_hsa.jpg"/>
+    		<h4>Homeschool Apple</h3>
+    		<p>Ecommerce Website</p>
+    		<p>The easiest way to buy and sell used Homeschool curricula online.</p>
+    		<p><a href="http://homeschoolapple.com">Visit Website</a></p>
+    	</div>
+    </div>
+    
+    <div class="clear pad_bottom"></div>
+    
+    <div class="boxcontainer grid_3 alpha">
+  	  <div class="boxgrid slidedown">
+    		<img class="cover" src="/images/product_aaap.jpg"/>
+    		<h4>Acts As Amazon Product</h3>
+    		<p>Open Source Ruby Gem</p>
+    		<p>A simple yet robust Ruby library for incorporating Amazon product lookups into your Rails application.</p>
+    		<p><a href="http://github.com/netphase/aaap">Visit GitHub Project</a></p>
+    	</div>
+  	</div>
+  	
+  	<div class="grid_3">
+  	  
+    </div>
+	
+	  <div class="boxcontainer grid_3 omega">
+	    <div class="boxgrid slideright">
+    		<img class="cover" src="/images/product_kungfu.jpg"/>
+    		<h4>Kung Fu Social</h3>
+    		<p>iPhone App &amp; Social Website</p>
+    		<p>A new location-aware social media game played on your mobile device that takes social networking to the next level.</p>
+    		<p><strong class="white">Coming Soon!</strong></p>
+    	</div>	  
+  	</div>
+	
+	 
+    
+	</div>
+</div>
+
+<div class="clear"></div>
+
+<div id="featured" class="grid_10 alpha">
+  <h3>Recently Released</h3>
+  <!--> 
+  <div class="grid_4 alpha">
+    <%= link_to image_tag('sr_screen_300.png'), "http://storyrealing.com", :title => "storyrealing.com screen shot", :target => "_blank"%>
+  </div>  
+  <div class="grid_6 omega">
+    <h4><%= link_to "Storyrealing.com", "http://storyrealing.com", :title => "storyrealing.com screen shot", :target => "_blank"%></h4>
+    <p>Storyrealing.com is the video blog for <%= link_to "the Big Deal Guys", "http://twitter.com/thebigdealguys", :target => "_blank" %>, a couple of super-creative fellas that put on a unique program for kids and families at Forest Hill Church.</p>
+    <p>One morning, they were lamenting to Chris, one of the Netphase partners, that they had no way to keep their site updated with new video content without jumping through some major hoops. Well, we just can't have that, can we?</p>
+    <p>Three hours later they not only had the ability to upload video, but they had a brand new site that looked great, and more importantly, that they could update themselves with virtually no training and absolutely no programming what-so-ever.</p>
+  </div>
+  <div class="clear pad_top_10"></div> 
+  <div class="grid_4 alpha">
+    <%= link_to image_tag('nano_composite_300.png'), nanomojo_path, :title => "NaNoMojo now available in the App store" %>
+  </div>
+  <div class="grid_6 omega">
+    <h4><%= link_to "NaNoMojo Goes Prime-time", nanomojo_path %></h4>
+    <p>NaNoMojo is now officially the only App available on the iTunes App Store dedicated to the <%= link_to "National Novel Writing Month contest", "http://www.nanowrimo.org", :target => "_new"%>, held annually during the month of November. The challenge of the competition is simple: novelists and novelist-wannabes must write a 50,000 word fiction novel in 30 days, starting from scratch.</p>
+    <p>During the contest, writers are allowed to upload their incomplete manuscripts and the magical NaNo computers will count all of the words and tell the contestants where they stand. As you can imagine, keeping track of one's wordcount during November is both a motivational practice and fun social activity. Writers tend to have writing buddies, and everyone likes to see how their friends are faring.</p>
+    <p>NaNoMojo helps NaNo participants keep up with their wordcounts, their buddies' wordcounts, and a whole lot more.  <%= link_to "Read more >", nanomojo_path %></p>
+  
+  </div>
+  <div class="clear pad_top_10"></div>
+  -->
+  <div class="grid_4 alpha">
+    <%= link_to image_tag('cc_screen_300.png'), "http://www.netphase.com/clients/30", :title => "CarolinaCoupons.com screen shot"%>
+  </div>
+  <div class="grid_6 omega">
+    <h4><%= link_to "CarolinaCoupons.com&trade;", "http://www.netphase.com/clients/30"%></h4>
+    <p>A few short months ago, Carolina MoneySaver magazine recognized the need for helping consumers with significant savings was growing dramatically. The economy is tough, and more people are clipping coupons and looking for ways to cut costs than at any time in recent memory. Being a fiscally responsible company in their own right, they knew that printing and mailing even more magazines was not the preferred approach; they needed to extend their reach beyond the local market fast!</p>
+    <p>Enter Netphase.  <%= link_to "Read more >", "http://www.netphase.com/clients/30"%></p>
+  
+    <h4>Our Clients Speak...</h4>
+    <p><strong>"These guys are absolutely awesome. Don't know what I would have done without them."</strong> - Marc Mandt, CIO, CarolinaMoneysaver.com</p>
+  </div>
+</div>
+
+<div class="clear pad_bottom"></div>
+
+<div class="grid_3 alpha" id="newsletter">
+  <h3>Got the Newsletter?</h3>
+  <p>Stay on top of the latest in web and mobile strategies with our monthly newsletter.</p>
+  <div id="subscribe_form">
+  <form action="http://app.newsberry.com/Subscribe.aspx?auto=True" method="post">
+    <p><input name="listID" id="listID" value="3842" type="hidden" />
+      Name <input type="text" id="Full Name" name="Full Name"/></p>               
+      <p>Email <input type="text" id="Email" name="Email" /></p>
+      <p><input type="submit" value="Submit" /></p>
+  </form>
+  </div>
+</div>
+<div class="grid_4" id="netphase_news">
+  <h3>The Latest Netphase News</h3>
+  <script language="JavaScript" src="http://feed2js.org//feed2js.php?src=http%3A%2F%2Ffeeds.feedburner.com%2Fnetphase&amp;num=4&amp;date=y&amp;tz=-5" type="text/javascript"></script>
+</div>
+<div class="grid_3 omega" id="special_feature">
+  <h3>We Support</h3>
+  <%= link_to(image_tag('edge_clt_logo.png'), "http://www.edgeclt.com/") %>
+  <h4><%= link_to "edgeCLT", "http://www.edgeclt.com/" %></h4>
+  <p>Charlotte's networking site for technology start-ups, entrepreneurs, web and media talent.<br/><%= link_to "Share, Learn and Connect", "http://www.edgeclt.com" %>.</p>
+</div>
+
+<div class="clear"></div>
+ 

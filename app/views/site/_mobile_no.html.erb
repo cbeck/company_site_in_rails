@@ -1,0 +1,7 @@
+<%= image_tag 'another_happy_customer.jpg' %>
+<h2>Don't Panic, We Can Help</h2>
+<p>Whether you would like to increase your team's efficiency by implementing systems that can be accessed on the go or you want to put your products in front of millions of new mobile users every month, we can provide a solution that meets your needs.</p>
+<p><strong>My we contact you for a free consultation?</strong></p>
+<div class="buttons">
+  <%= link_to_remote "Yes, you may.", :url => teaser_path(:next_step => "contact_form"), :html => {:class => "yes_button"} %> <%= link_to_remote "No, thanks.", :url => teaser_path(:next_step => "no_contact"), :html => {:class => "no_button"} %>
+</div>

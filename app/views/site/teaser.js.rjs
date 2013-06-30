@@ -1,0 +1,5 @@
+page.visual_effect :fade, 'teaser',  :duration => 0.5 
+page.delay 0.5 do
+  page.replace_html "teaser",:partial => @partial
+  page.visual_effect :appear, 'teaser'
+end

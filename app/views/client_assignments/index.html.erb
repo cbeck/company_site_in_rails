@@ -1,0 +1,24 @@
+<h1>Listing client_assignments</h1>
+
+<table>
+  <tr>
+    <th>Client</th>
+    <th>Service group</th>
+    <th>Enabled</th>
+  </tr>
+
+<% @client_assignments.each do |client_assignment| %>
+  <tr>
+    <td><%=h client_assignment.client_id %></td>
+    <td><%=h client_assignment.service_group_id %></td>
+    <td><%=h client_assignment.enabled %></td>
+    <td><%= link_to 'Show', client_assignment %></td>
+    <td><%= link_to 'Edit', edit_client_assignment_path(client_assignment) %></td>
+    <td><%= link_to 'Destroy', client_assignment, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New client_assignment', new_client_assignment_path %>

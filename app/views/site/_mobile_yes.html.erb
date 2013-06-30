@@ -1,0 +1,8 @@
+<%= image_tag 'nano_composite_300.png' %>
+<h2>Does Your Company Have An App Available For Download In The iTunes Store?</h2>
+<p>A creative App that showcases your company's message or product line is a terrific way to extend your brand.</p>
+<p>If the iPhone is not your cup of tea, does your company optimize it's current site for mobile browsing using techniques designed to make 
+  the most out of today's smart-phones with features such as location support, native controls, and embedded media?</p>
+<div class="buttons">
+  <%= link_to_remote "Yes, we do.", :url => teaser_path(:next_step => "mobile_have_iphone"), :html => {:class => "yes_button"} %> <%= link_to_remote "No, we don't.", :url => teaser_path(:next_step => "mobile_no"), :html => {:class => "no_button"} %>
+</div>

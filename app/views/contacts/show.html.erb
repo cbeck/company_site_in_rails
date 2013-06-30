@@ -1,0 +1,29 @@
+<p>
+  <b>Name:</b>
+  <%=h @contact.name %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%=h @contact.email %>
+</p>
+
+<p>
+  <b>Url:</b>
+  <%=h @contact.url %>
+</p>
+
+<p>
+  <b>Message:</b>
+  <%=h @contact.message %>
+</p>
+
+<p>
+  <b>Referred by:</b>
+  <%=h @contact.referred_by %>
+</p>
+
+
+<%= link_to 'Edit', edit_contact_path(@contact) %> |
+<%= link_to 'Destroy', @contact, :confirm => 'Are you sure?', :method => :delete %> |
+<%= link_to 'Back', contacts_path %>

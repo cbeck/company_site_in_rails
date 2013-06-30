@@ -1,0 +1,2 @@
+module ServiceAssignmentsHelper
+end

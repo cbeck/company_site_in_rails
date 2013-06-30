@@ -1,0 +1,29 @@
+<% content_for :lead_content do %>
+  <div id="work_lead">
+    <h1>Client List Admin</h1>
+    <p>This is my client list. There are many like it, but this one is mine...</p>
+  </div>
+  <div class="clear"></div>
+<% end %>
+
+<div class="grid_9 alpha">
+<table>
+  <th></th>
+  <th>ID</th>
+  <th>Name</th>
+  <th>Link Used</th>
+  <th>Last Updated</th>
+  <% @clients.each do |client| %>
+  	<tr class="<%= cycle('odd','even')%>">
+  	  <td>
+  	    <%= link_to("edit", edit_client_path(client, :friend => 1))%> | <%= link_to("remove", client_path(client, :friend => 1), :method => :delete) %>
+  	  </td>
+  	  <td><%= client.id %></td>
+  	  <td><%= client.name %></td>
+  	  <td><%= link_to(client_link_url(client)) %></td>
+  	  <td><%= time_ago_in_words client.updated_at %> ago</td>
+  	</tr>
+  <% end %>
+</table>
+</div>
+<div class="clear"></div>

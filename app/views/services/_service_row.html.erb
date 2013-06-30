@@ -1,0 +1,20 @@
+<% services ||= service_row %>
+<% serv_1 = services[0] %>
+<% serv_2 = services[1] %>
+<div class="grid_1 alpha">
+  <%= image_tag serv_1.image_url %>
+</div>
+<div class="grid_4 <%= 'suffix_5 omega' if serv_2.blank? -%>">
+  <h5><%= serv_1.name %></h5>
+  <p><%= serv_1.description %></p>
+</div>
+<% unless serv_2.blank? %>
+<div class="grid_1">
+  <%= image_tag serv_2.image_url %>
+</div>
+<div class="grid_4 omega">
+  <h5><%= serv_2.name %></h5>
+  <p><%= serv_2.description %></p>
+</div>
+<% end %>
+<div class="clear pad_bottom_20"></div>

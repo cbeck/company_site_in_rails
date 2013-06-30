@@ -1,0 +1,19 @@
+<p><%= render :partial => @image %></p>
+<p>
+  <b>Name:</b>
+  <%=h @image.name %>
+</p>
+
+<p>
+  <b>Contributor:</b>
+  <%=h @image.contributor %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @image.description %>
+</p>
+
+
+<%= link_to 'Edit', edit_image_path(@image) %> |
+<%= link_to 'Back', images_path %>

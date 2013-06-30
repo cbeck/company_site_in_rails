@@ -1,0 +1,46 @@
+<% remote_form_for(Contact.new) do |f| %>
+  <%= f.error_messages %>
+
+<div class="grid_5 alpha">
+  <p>
+    <%= f.label :name, "Your first and last name, please" %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :email, "Your preferred contact email" %><br />
+    <%= f.text_field :email %>
+  </p>
+  <p>
+    <%= f.label :url, "Your web address or the address relevant to the project, if available" %><br />
+    <%= f.text_field :url %>
+  </p>
+  <p>
+    <%= f.label :referred_by, "How did you hear about us?" %><br />
+    <%= f.text_field :referred_by %>
+  </p>
+  <p>
+    <%= f.submit 'Send' %>
+  </p>
+</div>
+<div class="grid_5 omega">
+  <p>
+    <%= f.label :message, "Please describe your situation or project" %><br />
+    <%= f.text_area :message %>
+  </p>
+</div>
+
+<% end %>
+<div class="clear"></div>
+<h3>Other Contact Methods</h3>
+<div class="grid_5 alpha">
+  <p>877-799-7829 TOLL-FREE
+  <br/>Sales / General: <%= mail_to "info@netphase.com"%>
+  <br/>Client Support: <%= mail_to "support@netphase.com"%>
+  <br/>Twitter: <%= link_to "@netphase", "http://twitter.com/netphase" %></p>
+</div>
+<div class="grid_5 omega">
+  <p>Netphase, LLC.<br/>
+    10612-D Providence Rd.<br/>
+    Suite 204<br/>
+    Charlotte, NC 28277</p>
+</div>

@@ -1,0 +1,15 @@
+<li class="line">
+  <div class="grid_2 alpha">
+    <%= render_client_image(project) %>
+  </div>
+  <div class="grid_5 omega">
+    <h5><%= render_client_name(project)%></h5>
+    <div class="project_description"><%= project.description %></div>
+    <% if project.story.blank? %>
+      <p>For more information about this project, please <%= link_to "contact us", contact_us_path %>.</p>
+    <% else %>
+      <p><%= link_to "Read More >", client_link_url(project) %></p>
+    <% end %>
+  </div>
+  <div class="clear"></div>
+</li>

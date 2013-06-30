@@ -1,0 +1,22 @@
+<h1>Listing service_groups</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+  </tr>
+
+<% @service_groups.each do |service_group| %>
+  <tr>
+    <td><%=h service_group.name %></td>
+    <td><%=h service_group.description %></td>
+    <td><%= link_to 'Show', service_group %></td>
+    <td><%= link_to 'Edit', edit_service_group_path(service_group) %></td>
+    <td><%= link_to 'Destroy', service_group, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New service_group', new_service_group_path %>

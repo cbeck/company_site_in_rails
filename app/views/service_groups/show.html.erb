@@ -1,0 +1,13 @@
+<p>
+  <b>Name:</b>
+  <%=h @service_group.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @service_group.description %>
+</p>
+
+
+<%= link_to 'Edit', edit_service_group_path(@service_group) %> |
+<%= link_to 'Back', service_groups_path %>

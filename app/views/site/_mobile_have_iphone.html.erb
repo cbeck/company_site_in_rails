@@ -1,0 +1,7 @@
+<%= image_tag 'youre_doing_great.jpg' %>
+<h2>That's Great! Now, Is There Anything Else We Can Help You With?</h2>
+<p>In addition to developing for mobile platforms, we specialize in robust, scalable architectures that can support your business no matter your users throw at it. We also are experts at turning around projects gone wrong.</p>
+<p><strong>My we contact you for a free consultation?</strong></p>
+<div class="buttons">
+  <%= link_to_remote "Yes, you may.", :url => teaser_path(:next_step => "contact_form"), :html => {:class => "yes_button"} %> <%= link_to_remote "No, thanks.", :url => teaser_path(:next_step => "no_contact"), :html => {:class => "no_button"} %>
+</div>

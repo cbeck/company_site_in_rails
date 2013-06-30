@@ -1,0 +1,24 @@
+
+<h1>Contacts</h1>
+
+<ul>
+<% @contacts.each do |contact| %>
+	<li>
+		<div>
+			<div style="float: right; margin-right: 2em;">
+				<%=time_ago_in_words contact.created_at %> ago
+			</div>
+			<div style="font-size: 1.1em; color: #633;">
+				<%=link_to contact.id, contact %>
+				<%=h contact.name %>
+				(<%=h contact.email %>)
+				<%=h contact.url %>
+				<%=h contact.referred_by %>
+			</div>
+			<div style="padding: 0.5em 1em 2em;">
+				<%=h contact.message %>
+			</div>
+		</div>
+	</li>
+<% end %>
+</ul>

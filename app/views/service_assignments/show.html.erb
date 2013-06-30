@@ -1,0 +1,18 @@
+<p>
+  <b>Service:</b>
+  <%=h @service_assignment.service_id %>
+</p>
+
+<p>
+  <b>Service grou:</b>
+  <%=h @service_assignment.service_grou_id %>
+</p>
+
+<p>
+  <b>Enabled:</b>
+  <%=h @service_assignment.enabled %>
+</p>
+
+
+<%= link_to 'Edit', edit_service_assignment_path(@service_assignment) %> |
+<%= link_to 'Back', service_assignments_path %>

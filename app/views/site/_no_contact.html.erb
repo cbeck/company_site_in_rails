@@ -1,0 +1,8 @@
+<%= image_tag 'welcome.jpg' %>
+<h2>No Worries! Thanks For Stopping By</h2>
+<p>We appreciate your visit to our site. Should things change in the future, please feel free to contact us to discuss your situation. Consultations are always free.</p>
+<div class="buttons">
+  <%= link_to_remote "Wait! I changed my mind.", :url => teaser_path(:next_step => "contact_form"), :html => {:class => "yes_button"} %>
+  <div class="help">(we had to try)</div>
+</div>
+<p class="pad_top_10">Remember, you can call us TOLL-FREE at 877-799-7823, email us at <%= mail_to "info@netphase.com" %>, or simply click the button above.</p>

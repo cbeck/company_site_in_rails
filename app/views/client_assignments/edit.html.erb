@@ -1,0 +1,24 @@
+<h1>Editing client_assignment</h1>
+
+<% form_for(@client_assignment) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :client_id %><br />
+    <%= f.text_field :client_id %>
+  </p>
+  <p>
+    <%= f.label :service_group_id %><br />
+    <%= f.text_field :service_group_id %>
+  </p>
+  <p>
+    <%= f.label :enabled %><br />
+    <%= f.check_box :enabled %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @client_assignment %> |
+<%= link_to 'Back', client_assignments_path %>

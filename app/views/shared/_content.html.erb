@@ -1,0 +1,31 @@
+<div id="content">
+  <div id="lead_content" class="<%= "pad_bottom_10" unless @no_box -%>">
+    <div class="container_12">
+      <div class="grid_10 prefix_1 suffix_1">
+        <%= yield :lead_content -%>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </div>
+  
+  <div id="main_content">
+    <div class="container_12">
+      <div class="grid_10 prefix_1 suffix_1">
+        <% unless @no_box %>
+        <div id="text_container" class="grid_10 alpha">
+          <div id="text_container_top">
+            <div id="text_container_inner">
+              <%= yield %>
+            </div>
+          </div>
+        </div>
+        <div class="clear"></div>
+        <%= yield :sub_content%>
+        <% else %>
+          <%= yield %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <div class="clear"></div>
+</div>

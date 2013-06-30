@@ -1,0 +1,1 @@
+page[:teaser].replace_html :partial => "shared/thank_you_message"

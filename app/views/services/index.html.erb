@@ -1,0 +1,170 @@
+<% content_for :lead_content do %>
+  <div id="services_lead">
+    <h1>How We Can Help You</h1>
+    <p>At Netphase, we believe in flexibility of approach. Each organization faces different challenges, and each project should be handled accordingly. Unlike some firms that believe that one-methodology-fits-all, we offer technology solutions that fit your company. The result is that we can deliver better solutions with fewer resources in less time, saving your bottom-line and getting your solution in place when you need it most.</p>
+  </div>
+  <div class="clear"></div>
+  
+<% end %>
+
+<% content_for :sub_content do %>
+  <div class="grid_10 alpha pad_bottom" id="services_sub">
+    <h3>Netphase Services</h3>
+    <% @services.in_groups_of(2, false) do |service_row| %>
+      <%= render :partial => "service_row", :object => "service_row", :locals => {:services => service_row} %>
+    <% end %>
+  </div>  
+<% end %>
+
+<ul id="services">
+  <li class="line">
+    <%= render_services_title 'bus_app', 'Savvy Business Application Development', false %>
+    <div id="bus_app">
+      <div class="grid_3 alpha">
+        <%= image_tag 'dat_screen_212_tall.png'%>
+        <div class="caption">Business applications developed by our team provide a clean, easy-to-use interface allowing your organization to immediately experience the benefits without a lot of training and confusion.</div>
+      </div>
+      <div class="grid_6 omega">
+        <h4>Is your bottom-line suffering due to inefficient use of technology?</h4>
+        <p><strong>Communication is critical in the Information Age</strong>. Your team-members should be able to access your company's systems from out in the field. Orders should be processed, inventories updated, documents viewed, and leads stored. Bottom line is that the world is mobile now, and either your company is poised to take advantage, or it isn't.</p>
+          <p>Is your company's technology getting in the way of maximum productivity? Are there reports that your system currently just cannot generate? Are your existing business applications difficult to use on a good day? If so, we can help.</p>
+          <p>Our team packs a wealth of problem-solving experience, honed over many years of consulting for the likes of <strong>Wachovia</strong>, <strong>Priceline</strong>, <strong>IBM</strong>, and <strong>Nortel</strong>, just to name a few. We have built applications that serviced millions of rows of data, processed financial transactions for top-5 banks, and have increased operating efficiency ten-fold.</p>
+          <p><strong><%= link_to "Contact us today", contact_us_path %></strong> to find out more about how we can help your business reach maximum productivity and enable your IT spending to enjoy a significant ROI.</p>
+        <h4 class="blue">Related Services</h4>
+        <p class="related"><%= render_grouped_list @bus_app_services, 6 %></p>
+        <div class="clear"></div>
+        <h4 class="blue">Companies Served</h4>
+        <p class="related">
+          <%= render_grouped_list @bus_app_companies, 3 %>
+        </p>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </li>
+  <li class="line">
+    <%= render_services_title 'web_app', 'Creative Web Site Design &amp; Development', false %> 
+    <div id="web_app">
+      <div class="grid_3 alpha">
+        <%= image_tag 'hsa_search_212.png', :class=>"margin_bottom_10"%>
+        <%= image_tag 'hsa_cart_212.png', :class=>"margin_bottom_10"%>
+        <%= image_tag 'hsa_checkout_212.png'%>
+        <div class="caption">Screenshots taken from <%= link_to "Homeschool Apple", "http://homeschoolapple.com"%>, the easiest way for homeschoolers to buy and sell used curriculum on the Web.</div>
+      </div>
+      <div class="grid_6 omega">
+        <h4>Is your website compelling your visitors to take action?</h4>
+        <p>If your website is generating a lot of traffic, yet your company is not seeing results, is all of that traffic really doing you any good?</p>
+        <p>Websites are supposed to move your target market to take some kind of action; whether it be to sign up for an event, purchase a product, or register for a membership. Despite what some Search Engine Marketers will tell you, 
+          it's not all about page views. Visitors are great, and the more you have, the greater your odds of success. But the goal should always be to get your users to do whatever it is that your business or organization exists for.</p>
+          <p>Is your site generating a lot of "hits", yet you are not seeing the desired results? Or worse - is your site struggling to draw your target market at all? Don't worry - we can help.</p>
+          <p><strong><%= link_to "Contact us now", contact_us_path %></strong> and we will perform a free analysis of your site and provide you with a report citing potential problem areas and what you can do about them. There is no obligation to use our services for any improvements, although we believe that if you decide to work with us, you will be glad you did.</p>
+          <p>And if you don't have a website at all, that's Ok, too. We have built award-winning web businesses from scratch, and can certainly help you to insure that your project is done right from the start.</p>
+        <h4 class="blue">Related Services</h4>
+        <p class="related"><%= render_grouped_list @web_app_services, 5 %></p>
+        <div class="clear"></div>
+        <h4 class="blue">Sites Built or Enhanced For</h4>
+        <p class="related"><%= render_grouped_list @web_app_companies, 5 %></p>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </li>
+  <li class="line">
+    <%= render_services_title 'iphone_app', 'iPhone &amp; Mobile App Development and Strategy Consulting', false %> 
+    <div id="iphone_app">
+      <div class="grid_3 alpha">
+        <%= image_tag 'iphone_nano_short.png', :class=>"margin_bottom_10"%>
+        <%= image_tag 'iphone_np.png'%>
+        <div class="caption">Screenshots from NaNoWriMojo, our app for the upcoming <%= link_to "National Novel Writing Month Competition", "http://www.nanowrimo.org"%>, and also the iPhone-optimized view of our blog.</div>
+      </div>
+      <div class="grid_6 omega">
+        <h4>Should your company have an iPhone app?</h4>
+        <p>The answer to that question actually depends on two things: 1) Does your company offer a product or service that can be delivered to millions of interested buyers over the most exciting platform to come along in years; and, 2) If not, is your organization's existing web site iPhone friendly?</p>
+        <p>Regardless of your answer to number 1, every business should pay close attention to number 2. More and more people have Internet-enabled devices with them on a consistent basis. Gone are the days when interested consumers would have to wait until they got home to check out your product or service. This is not only the Information Age, it is the Inform Me NOW! Age. If your website is difficult to read, navigate, or use from an iPhone, Palm Pre, Android, or any other smart phone, you could be leaving money on the table.</p>
+        <p>At the current rate of sales, there will be over 80 million iPhone and iPod touch users alone by the end of 2010. iPhones users are found in 180 countries world-wide. Talk about a global market! Plus, iPhone users buy apps. In droves. You can't afford to not take advantage of this opportunity.</p>
+        <p>If you have an idea for an iPhone, Pre, Android or similar mobile device app, or if you want to find out if your website is "iPhone Friendly", <strong><%= link_to "drop us a line today", contact_us_path %></strong>.  
+        <h4 class="blue">Related Services</h4>
+        <p class="related"><%= render_grouped_list @iphone_app_services, 5 %></p>
+        <div class="clear"></div>
+        <h4 class="blue">iPhone Apps and Mobile Friendly Sites in Development</h4>
+        <p class="related"><%= render_grouped_list @iphone_app_projects, 4 %></p>
+      </div>
+      <div class="clear"></div>
+    </div>
+    
+  </li>
+  <li class="line">
+    <%= render_services_title 'infrastructure', 'Scalable Systems Architecture Design &amp; Implementation', false %> 
+    <div id="infrastructure">
+      <div class="grid_3 alpha">
+        <%= image_tag 'infrastructure_dc_212.png', :class=>"margin_bottom_10"%>
+        <%= image_tag 'infrastructure_clouds_212.png'%>
+        <div class="caption">In addition to being able to design and maintain local server infrastuctures, we also are advocates of Cloud Computing, particularly solutions hosted on Amazon EC2 instances.</div>
+      </div>
+      <div class="grid_6 omega">
+        <h4>Are your servers slow? Can your infrastructure handle your business?</h4>
+        <p>The foundation of any successful technology implementation is a great system architecture. You can generate all of the traffic in the world, but without proper capacity planning, you are more likely to experience server outages and lost revenues than not.</p>
+        <p>However, that does not mean you should break the bank buying hardware in the hopes that you generate enough use to warrant the outlay. No, there is a better way.</p>
+        <p>With Netphase as your technology partner, we can recommend and implement flexible, scaleable solutions that allow you to pay for only the processor and bandwidth you are actually using, and also spin up more servers in a flash.</p>
+        <p>And if servers are not your issue, that's Ok. We have done everything from implementing high-capacity storage systems for High-Definition television companies to securing encrypted networks as well.</p>
+          <p><strong><%= link_to "Contact us today", contact_us_path %></strong> to discuss your server or infrastructure needs. We can help you choose a solution customized for your growing business needs.</p>
+        <h4 class="blue">Related Services</h4>
+        <p class="related"><%= render_grouped_list @infrastructure_services, 3 %></p>
+        <div class="clear"></div>
+        <h4 class="blue">Systems Designed And Implemented For</h4>
+        <p class="related">
+          <%= render_grouped_list @infrastructure_companies, 3 %>
+        </p>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </li>
+  <li class="line">
+    <%= render_services_title 'rescue', 'Project Rescue for Good Projects Gone Bad', false %>
+    <div id="rescue">
+      <div class="grid_3 alpha">
+        <%= image_tag 'rescue_bugs_212.png', :class=>"margin_bottom_10"%>
+        <%= image_tag 'rescue_frustration_212.png'%>        
+        <div class="caption">Even great development teams can write buggy code when deadlines loom and corners are cut. We can help your team get back on track by providing additional resources, code review, and in some cases, better alternatives to current development tracks.</div>
+      </div>
+      <div class="grid_6 omega">
+        <h4>Are your projects languishing and your developers stressed?</h4>
+        <p>There comes a time in every organization when you have more work than you can handle. While this is generally seen as a good problem to have, it can wreak havoc on your IT department. Before you know it, you either have a laundry list of projects that your business needs but you can't seem to get put on the development schedule, or you have a project or two that are headed down the wrong path and not enough of the right resources to right the ship.</p>
+        <p>You can break this endless cycle of frustration. And we can help.</p>
+        <p>We have the resources to address your project needs. We have a proven track record of turning around projects doomed for failure. Our development practices and the technologies we employ typically allow us to <strong>complete projects in half the time and with far fewer resources</strong> than is possible using standard methods. Your company saves money, projects get done, and you come out smelling like a rose.</p> 
+        <p>Sound too good to be true? It's not. <strong><%= link_to "Contact us right now", contact_us_path %></strong> and tell us about the project your team can't get to or the one that has gone awry. We offer free consultations, so you have nothing to lose - and everything to gain.</p>
+        <h4 class="blue">Related Services</h4>
+        <p class="related"><%= render_grouped_list @rescue_services, 6 %></p>
+        <div class="clear"></div>
+        <h4 class="blue">Development Team Supplementation or Projects Rescued For</h4>
+        <p class="related">
+          <%= render_grouped_list @rescue_companies, 3 %>
+        </p>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </li>
+  <li>
+    <%= render_services_title 'strategy', 'Netphase Strategy &amp; Consulting Services', false %>
+    <div id="strategy">
+      <div class="grid_3 alpha">
+        <%= image_tag 'strategy_chart_212.png', :class=>"margin_bottom_10"%>
+        <%= image_tag 'strategy_mtg_212.png'%>
+        <div class="caption">Our executive team averages over 25 years of software development experience and have been delivering enterprise projects to production for more than a decade. We have backgrounds in everything from start-ups to Top-5 banks, so you know you will be working with someone who has been there before.</div>
+      </div>
+      <div class="grid_6 omega">
+        <h4>Is something missing? Do you just need some guidance?</h4>
+        <p>Consider the following scenario: things are going well for your organization, but you get the feeling they could be better. Technology changes rapidly, and new markets and opportunities seem to pop up every other day. You have a great product or service, but are not necessarily sure that it is reaching its full potential. With Search Engine Marketing being more art than science, new social networks coming out of the woodwork, and everyone Tweeting all over the place, how can you be sure that your message is getting in front of your entire target audience?</p>
+        <p>To make matters more complicated, what if everyone hears about what a great thing you have going? Can your infrastructure handle the load? And with popularity comes a large target on your back; is your network secure?</p>
+        <p>These questions and more keep many a CEO up at night. Thankfully, we can provide the guidance and answers that will help your over-worked and over-stressed executives get some rest.</p>
+          <p><strong><%= link_to "Contact us today", contact_us_path %></strong> to schedule a free consultation with one of our tactical specialists. Our executive team has been delivering projects to production and providing strategy consulting expertise for more than a decade. We have the right people and the right skills to help your company or organization reach its full potential.</p>
+        <h4 class="blue">Related Services</h4>
+        <p class="related"><%= render_grouped_list @strategy_services, 7 %></p>
+        <div class="clear"></div>
+        <h4 class="blue">Strategy and Consulting Provided To</h4>
+        <p class="related">
+          <%= render_grouped_list @strategy_companies, 10 %>
+        </p>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </li>
+</ul>

@@ -1,0 +1,18 @@
+<p>
+  <b>Client:</b>
+  <%=h @client_assignment.client_id %>
+</p>
+
+<p>
+  <b>Service group:</b>
+  <%=h @client_assignment.service_group_id %>
+</p>
+
+<p>
+  <b>Enabled:</b>
+  <%=h @client_assignment.enabled %>
+</p>
+
+
+<%= link_to 'Edit', edit_client_assignment_path(@client_assignment) %> |
+<%= link_to 'Back', client_assignments_path %>

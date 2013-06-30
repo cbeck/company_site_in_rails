@@ -1,0 +1,27 @@
+<% content_for :lead_content do %>
+  <div id="work_lead">
+    <h1>Our Work</h1>
+    <p>Our team members have broad and deep experience in several industry sectors. We've worked with organizations of all sizes, from start-up to enterprise. We keep our operational overhead low by choosing only to work with the best talent on a project-by-project basis. This insures our clients receive the highest quality service without the burden of paying for junior-level employees sitting on the bench.</p>
+    <p>We are constantly searching for dedicated self-starters who have a passion for their craft. If you are creative, dependable, professional, and simply outstanding at what you do, <%= link_to "we want to hear from you", "mailto:jobs@netphase.com" %>.</p>
+  </div>
+  <div class="clear"></div>
+<% end %>
+
+<div id="work">
+  <div class="grid_7 alpha">
+    <div id="projects">
+      <h2>Recent Projects</h2>
+      <ul id="project_list">
+        <%= render :partial => "project", :collection => @projects %>
+      </ul>
+    </div>
+  </div>
+  <div id="clients" class="grid_2 omega right">
+    <h4>In Good Company</h4>
+    <p>Our team has consulted on projects for the top Fortune-500 enterprises, dynamic Silicon Valley start-ups, and everything in between.</p>
+    <ul>
+      <%= render :partial => @clients %>
+    </ul>
+  </div>
+  <div class="clear"></div>
+</div>
